@@ -1,6 +1,6 @@
 # ScratchOfDoom
 
-## 📖 Description
+## Description
 **ScratchOfDoom** is a reimagining of the classic FPS **DOOM**, built entirely within [Scratch](https://scratch.mit.edu/).  
 
 Scratch is best known as an educational tool for introducing programming, with simple drag-and-drop blocks and a strong focus on 2D games. It does not provide features like 3D rendering, mouse-lock camera controls, or raycasting — all things that DOOM relies on. Despite that, this project manages to simulate a first-person experience with movement, shooting, enemies, and a working HUD, created in just one week.  
@@ -9,7 +9,7 @@ Every mechanic had to be improvised: the camera is controlled by dragging the cu
 
 ---
 
-## ⚙️ Install Guide
+## Install Guide
 1. Download the project file: **`doom.sb3`**  
 2. Open the [Scratch editor](https://scratch.mit.edu/projects/editor/) in your browser.  
 3. Click on the menu at the top left:  
@@ -21,7 +21,7 @@ Every mechanic had to be improvised: the camera is controlled by dragging the cu
 
 ---
 
-## 🎮 Controls
+## Controls
 Scratch doesn’t support standard FPS inputs, so the controls work a little differently:  
 
 **Player Controls**  
@@ -38,11 +38,11 @@ For those interested in the engine itself, these keys reveal how the renderer wo
 
 ---
 
-## 🏗️ Game Engine Architecture
+## Game Engine Architecture
 The core of this project is a hand-built game engine designed to simulate a 3D environment within Scratch. It consists of three major subsystems:  
 
 
-### 🖥️ 3D Renderer
+### 3D Renderer
 At the heart of this project is a custom-built **3D software renderer**, written entirely in Scratch’s visual programming language. Since Scratch has no native 3D capabilities, every step of the graphics pipeline had to be implemented from first principles.  
 
 Key technical components:  
@@ -62,7 +62,7 @@ Key technical components:
 
 ---
 
-### 👾 Enemy Management System
+### Enemy Management System
 Beyond the renderer itself, I built a dedicated **enemy management system** to handle gameplay logic:  
 
 - **Spawning Logic** — Enemies spawn dynamically, each with randomized attributes (e.g., position, health).  
@@ -72,7 +72,7 @@ Beyond the renderer itself, I built a dedicated **enemy management system** to h
 
 ---
 
-### 🎯 User Interface System
+### User Interface System
 Even displaying numbers on the screen required building a custom solution. Scratch does not provide a straightforward way to render digits with custom fonts, so I had to create a **dedicated component for UI rendering**:  
 
 - **Digit Cloning System** — Each digit of a number is represented by a sprite clone.  
@@ -81,7 +81,7 @@ Even displaying numbers on the screen required building a custom solution. Scrat
 
 ---
 
-## ⚡ Technical Challenges
+## Technical Challenges
 The most difficult part of this project was not implementing the rendering pipeline itself, but **optimizing it to run at a playable framerate** inside Scratch.  
 
 - On a mid-range PC, the game reaches around **18 FPS**, while higher-end systems can achieve **25 FPS**. While low by modern gaming standards, this performance is unusually high for a 3D engine built in Scratch — and it was achieved **without using TurboWarp**, since the challenge I imposed on myself required vanilla Scratch.  
@@ -95,7 +95,7 @@ Overall, the project demanded several hours a day across the week to balance mat
 
 ---
 
-## 🐞 Bugs & Limitations
+## Bugs & Limitations
 This project was built under a **one-week time limit**, so some rough edges remain:  
 
 - Health and ammo counters can display **negative values**.  
@@ -107,14 +107,14 @@ These aren’t oversights so much as the natural byproduct of rapid prototyping 
 
 ---
 
-## 🏅 Significance
+## Significance
 This isn’t a faithful port of DOOM, but rather an exploration of how far Scratch can be pushed. In a space usually reserved for platformers and clicker games, ScratchOfDoom demonstrates that it’s possible to build a functioning 3D pipeline — complete with rendering, lighting, and game logic — in a tool that was never designed for it.  
 
 It’s a case study in constraint-driven design: when traditional solutions aren’t available, you invent new ones.  
 
 ---
 
-## 🙌 Contributing
+## Contributing
 If you’d like to build on this project, here are some ideas for future improvements:  
 
 - Add a proper **death screen** and game over state.  
